@@ -95,7 +95,7 @@ namespace BrandXR.Textures
                 {
                     for( int i = 0; i < numTextures; i++ )
                     {
-                        Debug.Log( "Loading " + ( totalNumberOfTextures + ( i + 1 ) ) );
+                        //Debug.Log( "Loading " + ( totalNumberOfTextures + 1 ) + ", numOfTextures = " + numTextures );
 
                         Coroutine coroutine = SpriteLoader.Instance.ILoadFromCacheOrDownload
                         (
@@ -119,10 +119,12 @@ namespace BrandXR.Textures
                         );
 
                         yield return coroutine;
+                        totalNumberOfTextures++;
+                        textureCount.text = "Texture Count: " + totalNumberOfTextures;
+                        //yield return new WaitForSeconds( .1f );
                     }
 
-                    totalNumberOfTextures += numTextures;
-                    textureCount.text = "Texture Count: " + totalNumberOfTextures;
+                    
                 }
             }
             else
