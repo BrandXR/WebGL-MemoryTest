@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<link rel="shortcut icon" href="TemplateData/favicon.ico">
+		<link rel="stylesheet" href="TemplateData/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<title>{{{ PRODUCT_NAME }}}</title>
+	</head>
+	
+   <body style="background-color:black;">
+      <div id="unity-container" class="unity-desktop">
+         <canvas id="unity-canvas"></canvas>
+         <div id="overlay-clip" class="overlay">
+            <div id="overlay" class="overlay-layer"></div>
+         </div>
+         <div id="unity-loading-bar">
+            <div id="unity-logo"></div>
+         </div>
+         <div id="counter" class="counter">
+            <p id="loadingInfo" style="position: relative; top: 28px;">loading</p>
+            <h1 id="progressC">0%</h1>
+            <div id="ProgressLineB" class="ProgressLineB"> </div>
+            <div id="ProgressLine" class="ProgressLine"> </div>
+         </div>
+      </div>
+	  
+      <div id="loadingBox">
+         <div class="vertical-centered-box">
+            <div class="content">
+               <div class="loader-circle"></div>
+               <div class="loader-line-mask">
+                  <div class="loader-line"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+	
+	<script src="TemplateData/loader.js"></script>
+	
+   </body>
+</html>
